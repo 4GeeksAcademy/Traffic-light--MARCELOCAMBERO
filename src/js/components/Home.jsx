@@ -27,8 +27,7 @@ const Home = () => {
 		return (
 			<>
 				<TrafficLights color={color} changingColors={changingColors} />
-				<button type="button" onClick={buttonColor} className="btn btn-success">cambio de color</button>
-				
+				<button  type="button" onClick={buttonColor} className="container d-flex justify-content-center col-2  mt-5 btn btn-warning border-3 border-black">cambio de color</button>	
 			</>
 			
 		);
