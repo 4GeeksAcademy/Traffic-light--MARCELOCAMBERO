@@ -1,28 +1,37 @@
-import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useState } from "react";
+import  TrafficLights from "./TrafficLights/TrafficLights"
 
 //create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-            
+	//AQUI VAMOS A CREAR LAS FUNCIONES DEL SEMAFORO
+	const [ color, setColor ] = useState("red");
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+
+
+	const buttonColor = () => {
+			switch (color) {
+				case "red": setColor("yellow");
+				break;
+				case "yellow": setColor("green");
+				break;
+				case "green": setColor("red");
+				break;
+			}
+	} 
+	const changingColors = (newColor) => {
+		setColor(newColor)
+
+	};
+
+		return (
+			<>
+				<TrafficLights color={color} changingColors={changingColors} />
+				<button type="button" onClick={buttonColor} className="btn btn-success">cambio de color</button>
+				
+			</>
+			
+		);
 };
 
 export default Home;

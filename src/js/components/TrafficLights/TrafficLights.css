@@ -1,0 +1,48 @@
+.base {
+    display: flex;
+    justify-content: center;
+}
+
+.miSemaforo {
+    margin-top:40px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    width: 300px;
+    height: 600px;
+}
+
+.redLight {
+    background-color: red;
+    width: 80%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.yellowLight {
+    background-color: yellow;
+    width: 80%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.greenLight {
+    background-color: green;
+    width: 80%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.on {
+    box-shadow: 0 0 20px 5px white;
+}
+
+.purple  {
+    z-index: 3;
+    background-color: purple !important;
+    box-shadow: 0 0 20px 5px white;
+
+}
